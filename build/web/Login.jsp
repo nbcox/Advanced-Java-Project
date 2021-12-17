@@ -29,6 +29,7 @@
                     session.setAttribute("password", password);
         %>
         <h2>Congratulations! User successfully logged in.</h2>
+        <p><a href="Dashboard.jsp">Go to Dashboard</a></p>
         <%
         } else {
         %>
