@@ -93,6 +93,12 @@
         </style>
     </head>
     <body>
+        <%
+            PrintWriter writer = response.getWriter();
+            if (session == null) {
+                writer.println("You are not logged in");
+            }
+        %>
         <div class = "sideMenu">
             <ul>
                 <li><a href="#">Dashboard Home</a></li>

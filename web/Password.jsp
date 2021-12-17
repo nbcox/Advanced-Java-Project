@@ -114,7 +114,8 @@
                 String password = (String) session.getAttribute("password");
                 try {
                     conn = JdbcManager.getConnection();
-                    stmt = conn.createStatement();
+                    stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, 
+                            ResultSet.CONCUR_UPDATABLE);
 
                     String sqlcmd = "select * from accounts where username='"
                             + user + "'";

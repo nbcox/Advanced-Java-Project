@@ -6,6 +6,9 @@
         <title>Logout</title>
     </head>
     <body>
-        <h1>You are now logged out. Please close the browser.</h1>
+        <%
+            request.getSession().invalidate();
+            response.sendRedirect("welcome.html");
+        %>
     </body>
 </html>
