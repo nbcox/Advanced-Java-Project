@@ -11,31 +11,39 @@
         <%
             Connection conn = null;
             Statement stmt = null;
+            ResultSet rs = null;
+            String user = request.getParameter("username");
+            String password = request.getParameter("password");
             try {
                 conn = JdbcManager.getConnection();
                 stmt = conn.createStatement();
 
-                String sqlcmd = "insert into accounts values ('"
-                        + request.getParameter("user") + "', '"
-                        + request.getParameter("password") + "')";
-                int result = stmt.executeUpdate(sqlcmd);
+                String sqlcmd = "select * from accounts where username='"
+                        + user + "' and password= '" + password + "'";
+                rs = stmt.executeQuery(sqlcmd);
 
-                if (result == 1) {
+                rs.next();
+                if (rs.getString("username").equals(user)
+                        && rs.getString("password").equals(password)) {
+                    session.setAttribute("username", user);
+                    session.setAttribute("password", password);
         %>
-        Data successfully inserted into database
-        <%      } else {
+        <h2>Congratulations! User successfully logged in.</h2>
+        <%
+        } else {
         %>
-        Data was not inserted into database. Reason for failure is unknown
-        <%        }
+        <h2>Invalid username or password</h2>
+        <%
+            }
         } catch (SQLException e) {
         %>
+        <h2>Error! Could not login.</h2>
         <%= e.getMessage()%>
-
         <%
-                e.printStackTrace();
             } finally {
                 JdbcManager.close(stmt);
                 JdbcManager.close(conn);
+                rs.close();
             }
         %>
     </body>
