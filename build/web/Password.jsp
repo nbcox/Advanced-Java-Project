@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Dashboard</title>
+        <title>Change Password</title>
         <style>
             *{
                 margin: 0;
@@ -95,14 +95,14 @@
     <body>
         <div class = "sideMenu">
             <ul>
-                <li><a href="#">Dashboard Home</a></li>
+                <li><a href="Dashboard.jsp">Dashboard Home</a></li>
                 <li><a href="SessionInfo.jsp">Session Information</a></li>
-                <li><a href="Password.jsp">Change Password</a></li>
+                <li><a href="#">Change Password</a></li>
                 <li><a href="/logout">Log Out</a></li>
             </ul>
         </div>
         <div class="content">
-            <h1>User Management Web Application Dashboard</h1>
+            <h1>Change Password</h1>
         </div>
     </div>
 </body>

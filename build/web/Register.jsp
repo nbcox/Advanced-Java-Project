@@ -5,6 +5,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Confirmation</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+        </style>
     </head>
     <body>
         <h1>Register Confirmation</h1>

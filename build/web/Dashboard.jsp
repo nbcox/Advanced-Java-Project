@@ -59,7 +59,7 @@
                 margin-left: 600px;
                 margin-top:100px;
                 border:3px solid lightgray;
-                position: absolute;
+                position: static
             }
             .content h1{
                 font-size: 50px;
@@ -69,21 +69,6 @@
                 margin-right:50px;
                 color:white;
                 text-decoration: none;
-            }
-            .submitInput{
-                width: 200px;
-                padding: 15px 0;
-                text-align: center;
-                margin-left: 300px;
-                margin-top: 120px;
-                border-radius: 25px;
-                font-weight: bold;
-                border: 2px solid #009688;
-                background: transparent;
-                color:#fff;
-                cursor: pointer;
-                position: relative;
-                overflow: hidden;
             }
             button{
                 width: 80px;
@@ -110,8 +95,9 @@
     <body>
         <div class = "sideMenu">
             <ul>
+                <li><a href="#">Dashboard Home</a></li>
                 <li><a href="SessionInfo.jsp">Session Information</a></li>
-                <li><a href="/logout">Change Password</a></li>
+                <li><a href="Password.jsp">Change Password</a></li>
                 <li><a href="/logout">Log Out</a></li>
             </ul>
         </div>
