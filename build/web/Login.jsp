@@ -87,10 +87,6 @@
                     </form>
                 </div>
                 <%
-                } else {
-                %>
-                <h2>Invalid username or password</h2>
-                <%
                     }
                 } catch (SQLException e) {
                 %>

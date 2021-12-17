@@ -54,19 +54,19 @@
             }
             .content{
                 width: 50%;
-                height: 60%;
-                background-color:rgba(0, 0, 0, 0.2);
-                margin-left: 600px;
-                margin-top:100px;
-                border:3px solid lightgray;
-                position: static
+                position: absolute;
+                top: 30%;
+                transform: translateX(+50%);
+                color: #fff;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                padding: 15px;
+                margin: 50px 0 50px 120px;
             }
             .content h1{
                 font-size: 50px;
                 text-align: center;
                 font-family:sans-serif;
-                margin-top:20px;
-                margin-right:50px;
                 color:white;
                 text-decoration: none;
             }
@@ -97,8 +97,8 @@
             <ul>
                 <li><a href="#">Dashboard Home</a></li>
                 <li><a href="SessionInfo.jsp">Session Information</a></li>
-                <li><a href="Password.jsp">Change Password</a></li>
-                <li><a href="/logout">Log Out</a></li>
+                <li><a href="password.html">Change Password</a></li>
+                <li><a href="Logout.jsp">Log Out</a></li>
             </ul>
         </div>
         <div class="content">
