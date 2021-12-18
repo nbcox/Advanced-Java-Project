@@ -113,7 +113,6 @@
             <%
             } else {
             %>
-            <h2>Thank you, you are already logged in</h2>
             <h2>Here is the data in your session:</h2>
             <%
                 Enumeration names = session.getAttributeNames();
